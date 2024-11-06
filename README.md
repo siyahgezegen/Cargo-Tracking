@@ -40,6 +40,9 @@ Bu tablo, kargo şirketinin sistemine kaydedilen kullanıcıları tutar. Her kul
 | **Email**   | `varchar(100)`       | Kullanıcının e-posta adresi.  |
 | **CreatedAt**| `DATETIME`          | Kullanıcının oluşturulma tarihi. Bu sütun, kullanıcı kaydının oluşturulduğu tarihi otomatik olarak alır. |
 
+---
+
+
 ### 2. **Addresses (Adresler)**
 
 Bu tablo, kullanıcıların adres bilgilerini tutar.
@@ -52,6 +55,9 @@ Bu tablo, kullanıcıların adres bilgilerini tutar.
 | **City**     | `varchar(100)`       | Şehir adı.  |
 | **PostalCode** | `varchar(10)`       | Posta kodu.|
 
+---
+
+
 ### 3. **ShipmentStatus (Kargo Durumu)**
 
 Kargo takibinde kullanılan kargo durumlarını tutar (Örneğin: "Teslim Edildi", "Yolda", "Şubede").
@@ -61,6 +67,9 @@ Kargo takibinde kullanılan kargo durumlarını tutar (Örneğin: "Teslim Edildi
 | **StatusId**  | `int`            | **Primary Key**, Kargo durumunun benzersiz ID'si.|
 | **StatusName**| `varchar(50)`    | Kargo durumunun adı. Örneğin: "Yolda", "Teslim Edildi", "Şubede" gibi kargo durumları burada saklanır. |
 | **UpdatedAt** | `DATETIME`       | Kargo durumunun son güncellenme tarihi. Bu alan, durumun ne zaman güncellendiğini gösterir. |
+
+---
+
 
 ### 4. **Shipments (Kargolar)**
 
@@ -77,6 +86,9 @@ Bu tablo, her bir kargonun gönderici ve alıcı bilgilerini, kargo fiyatını v
 | **StatusId** | `int`                | **Foreign Key**, Kargo durumu ID'si. Kargonun güncel durumunu belirler. |
 | **CreatedAt**| `DATETIME`           | Kargonun oluşturulma tarihi. Kargonun sisteme kaydedildiği tarihi belirtir. |
 
+---
+
+
 ### 5. **ShipmentTracking (Kargo Takibi)**
 
 Kargonun her bir hareketi ve durumu bu tabloda yer alır. Kargo her hareket ettiğinde bir kayıt oluşturulur.
@@ -89,6 +101,9 @@ Kargonun her bir hareketi ve durumu bu tabloda yer alır. Kargo her hareket etti
 | **StatusId**  | `int`            | **Foreign Key**, Kargo durumu ID'si. |
 | **Timestamp** | `DATETIME`       | Kargo hareketinin zamanını gösterir. |
 
+---
+
+
 ### 6. **PaymentMethods (Ödeme Yöntemleri)**
 
 Kargo ücretinin ödenmesi için geçerli olan ödeme yöntemlerini tutar.
@@ -97,6 +112,9 @@ Kargo ücretinin ödenmesi için geçerli olan ödeme yöntemlerini tutar.
 |---------------|------------------|------------------------------------------------------------|
 | **PaymentMethodId**| `int`        | **Primary Key**, Ödeme yöntemi için benzersiz numara. |
 | **MethodName**| `varchar(50)`    | Ödeme yönteminin adı. Örneğin: "Kredi Kartı", "Nakit" gibi seçenekler burada saklanır. |
+
+---
+
 
 ### 7. **Payments (Ödemeler)**
 
@@ -109,6 +127,9 @@ Kargoların ödeme işlemlerine ait detayları içerir.
 | **PaymentMethodId**| `int`       | **Foreign Key**, Ödeme yöntemi ID'si. Kullanılan ödeme yöntemini belirtir. |
 | **Amount**    | `DECIMAL(10,2)`  | Ödeme tutarı. Kargo ücretinin ödendiği miktarı belirtir. |
 | **PaidAt**    | `DATETIME`       | Ödemenin yapıldığı tarih. Ödemenin alındığı zamanı gösterir. |
+
+---
+
 
 ### 8. **Branches (Şubeler)**
 
