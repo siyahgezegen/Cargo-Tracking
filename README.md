@@ -133,4 +133,10 @@ Kargo işlemlerinin yapılacağı şubeleri tanımlar. Şubeler, kargo alımı, 
 - **Shipment -> ShipmentTracking**: Her kargo birden fazla takip kaydına sahip olabilir. (1:n)
 - **Payment -> PaymentMethod**: Her ödeme bir ödeme yöntemiyle ilişkilidir. (n:1)
 - **Branch -> Address**: Her şube bir adresle ilişkilidir. (1:1)
+</br>
 
+# ER Diagram 
+
+</br>
+
+![diagram](https://github.com/siyahgezegen/Cargo-Tracking/blob/main/diagram.jpg)
