@@ -129,8 +129,9 @@ Kargo işlemlerinin yapılacağı şubeleri tanımlar. Şubeler, kargo alımı, 
 - **User -> Shipment (Sender)**: Bir kullanıcı (Gönderen) birden fazla kargo gönderebilir. (1:n)
 - **User -> Shipment (Receiver)**: Bir kullanıcı (Alıcı) birden fazla kargo alabilir. (1:n)
 - **Shipment -> ShipmentStatus**: Her kargo bir kargo durumuna sahiptir. (n:1)
-- **Shipment -> Payment**: Her kargo bir ödeme kaydıyla ilişkilidir. (1:1)
+- **Shipment -> Payment**: her kargo sadece bir ödeme kaydıyla ilişkilidir. (1:1)
 - **Shipment -> ShipmentTracking**: Her kargo birden fazla takip kaydına sahip olabilir. (1:n)
+- **ShipmentTracking -> ShipmentStatus**: Bir  kargo için sadece bir durumla ilişkilidir.(1:1)
 - **Payment -> PaymentMethod**: Her ödeme bir ödeme yöntemiyle ilişkilidir. (n:1)
 - **Branch -> Address**: Her şube bir adresle ilişkilidir. (1:1)
 </br>
