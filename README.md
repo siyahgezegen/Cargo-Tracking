@@ -23,4 +23,5 @@ Proje, kullanıcıların gönderici veya alıcı olarak kaydedilmesi, kargo taki
 - **Şube Yönetimi:** Kargo işlemlerinin yapılacağı şubeler sisteme kaydedilir.
 
 ---
-
+[Database Yapısı için Tıkla](databaseStruct.md)
+---
