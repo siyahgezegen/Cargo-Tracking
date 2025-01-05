@@ -7,7 +7,6 @@ DELETE FROM PaymentMethods;
 DELETE FROM ShipmentStatus;
 DELETE FROM City;
 
-
 DROP TABLE IF EXISTS Payments;
 DROP TABLE IF EXISTS ShipmentTracking;
 DROP TABLE IF EXISTS Shipments;

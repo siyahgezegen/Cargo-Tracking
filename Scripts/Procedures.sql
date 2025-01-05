@@ -1,6 +1,6 @@
 CREATE PROCEDURE UpdateShipmentTracking
 (   @ShipmentId int,
-    @Location char(2),
+    @Location VARCHAR(100),
     @StatusId int
 )
 AS
@@ -14,9 +14,8 @@ CREATE PROCEDURE CargoInformation
 )
 AS
 BEGIN
-    SELECT st.TrackingId,st.Location,ss.StatusName,st.Timestamp FROM ShipmentTracking as st
-    inner join ShipmentStatus ss
+    SELECT st.ShipmentId,st.TrackingId,st.Location,ss.StatusName,st.Timestamp FROM ShipmentTracking as st
+    inner join ShipmentStatus as ss
     on ss.Id = st.StatusId
-    WHERE st.tra
+    WHERE st.ShipmentId =@ShipmentId 
 END
-

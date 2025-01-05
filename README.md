@@ -6,22 +6,21 @@
 
 ## Proje Ekibi
 
->- **Ömer Karaman**
->- **Ahmet Yasin Durakcı**
->- **Muhammed Bünyamin Altun**
-</br>
+> - **Ömer Karaman 23526001**
+> - **Ahmet Yasin Durakcı 235260125**
+> - **Muhammed Bünyamin Altun 205260011**
+>   </br>
 
 ## Proje Amacı
 
-Bu proje, bir kargo şirketinin kargo takibi otomasyonunu sağlamak amacıyla tasarlandı. 
+Bu proje, bir kargo şirketinin kargo takibi otomasyonunu sağlamak amacıyla tasarlandı.
 Proje, kullanıcıların gönderici veya alıcı olarak kaydedilmesi, kargo takibi, ödeme işlemleri ve kargo durumlarının güncellenmesini kapsıyor.
 
 - **Kullanıcı Yönetimi:** Gönderen ve alıcıların bilgileri kaydedilir.
 - **Adres Yönetimi:** Kullanıcıların adres bilgileri saklanır.
 - **Kargo Takibi:** Kargonun hareketleri ve güncel durumu takip edilir.
 - **Ödeme Yöntemleri ve Ödemeler:** Kargo ücretlerinin ödenmesi için çeşitli ödeme yöntemleri sağlanır.
-- **Şube Yönetimi:** Kargo işlemlerinin yapılacağı şubeler sisteme kaydedilir.
 
 ---
-[Database Yapısı için Tıkla](databaseStruct.md)
----
+
+## [Database Yapısı için Tıkla](databaseStruct.md)

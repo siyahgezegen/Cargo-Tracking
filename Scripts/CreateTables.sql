@@ -68,7 +68,6 @@ CREATE TABLE
         PaymentId INT PRIMARY KEY IDENTITY (1, 1),
         ShipmentId INT NOT NULL,
         PaymentMethodId INT NOT NULL,
-        Amount DECIMAL(10, 2) NULL,
         PaymentDate DATETIME DEFAULT GETDATE (),
         CONSTRAINT FK_Payments_Shipments FOREIGN KEY (ShipmentId) REFERENCES Shipments (ShipmentId) ON DELETE CASCADE,
         CONSTRAINT FK_Payments_Method FOREIGN KEY (PaymentMethodId) REFERENCES PaymentMethods (PaymentMethodId) ON DELETE NO ACTION

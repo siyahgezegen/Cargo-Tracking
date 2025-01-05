@@ -20,12 +20,4 @@ BEGIN
                 inserted
         ) i ON s.ShipmentId = i.ShipmentId;
 
-    SELECT TOP 1 @price = s.Price, @shipmentId = s.ShipmentId
-    FROM Shipments s
-    INNER JOIN inserted i ON s.ShipmentId = i.ShipmentId;
-
-    UPDATE Payments
-    SET Amount = @price
-    WHERE ShipmentId = @shipmentId;
-
 END;
